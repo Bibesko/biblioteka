@@ -26,6 +26,10 @@ public class Biblioteka implements Bibliotekainterfejs {
 		
 		LinkedList<Knjiga> rezultat = new LinkedList<Knjiga>();
 		
+		if ( naslov == null && izdavac == null && autor == null ){
+			return knjige;
+		}
+		
 		if ( ISBN > 0 ) {
 			for (int i = 0; i < knjige.size(); i++) {
 				if (knjige.get(i).getISBN()== ISBN) {
